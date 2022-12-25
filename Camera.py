@@ -8,5 +8,9 @@ Camera.geometry('400x350')
 Camera.minsize(400,350)
 Camera.maxsize(800,550)
 
+#frame creation
+Frame_camera=Frame()
+
+
 
 Camera.mainloop()
