@@ -1,6 +1,14 @@
 
 From tkinter import *
+From deepface import Deepface
+Import imutils
 Import cv2
+
+def speak(text):
+  engine=
+  engine.
+  engine.RunAndWait()
+  
 
 def video():
   Cam=cv2.videocapture(0)
@@ -19,6 +27,7 @@ def capture():
   Cap_save=Top-level
   name=(nam+'jpg')
   Capt=cv2.imread(name,1)
+  Read=Deepface.analyze(Capt,action['age','gender','emotion'])
   
 
 
@@ -33,9 +42,9 @@ Frame_camera=Frame(Camera)
 Cam=cv2.videocapture(0)
   While(True):
     ret,frame=cam.read()
-    Cv2.imshow('frame',frame)
+    cv2.imshow(Frame_camera,frame)
 Cam.release()
-Cv2.destroyAllWindow()
+cv2.destroyAllWindow()
 
 
 
