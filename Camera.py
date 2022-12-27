@@ -1,12 +1,14 @@
-
+Import pyttsx3 as pt
 From tkinter import *
 From deepface import Deepface
 Import imutils
 Import cv2
 
 def speak(text):
-  engine=
-  engine.
+  engine=pt.init()
+  engine.say(text)
+  Voices=engine.getproperties('voices')
+  Print(Voices)
   engine.RunAndWait()
   
 
@@ -28,7 +30,8 @@ def capture():
   name=(nam+'jpg')
   Capt=cv2.imread(name,1)
   Read=Deepface.analyze(Capt,action['age','gender','emotion'])
-  
+  Print(Read)
+  Speak(Read)
 
 
 Camera=Tk()
@@ -43,6 +46,8 @@ Cam=cv2.videocapture(0)
   While(True):
     ret,frame=cam.read()
     cv2.imshow(Frame_camera,frame)
+    Read=Deepface.analyze(Capt,action['age','gender','emotion'])
+    Print(Read)
 Cam.release()
 cv2.destroyAllWindow()
 
